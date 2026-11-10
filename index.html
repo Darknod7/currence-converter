@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currence-converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Currence-Converter</h1>
+       <div class="currence-container">
+        <select id="currence-first">
+            <option value="USD"selected>USD</option>
+             <option value="RUB">RUB</option>
+              <option value="UZS">UZS</option>
+               <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>  
+        </select>
+        <input type="number" id="worth-first" value="1" min="0">
+       </div>
+       <div class="currence-container">
+        <select id="currence-second">
+            <option value="USD">USD</option>
+             <option value="RUB">RUB</option>
+              <option value="UZS"selected>UZS</option>
+               <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>  
+        </select>
+        <input type="number" id="worth-second" disabled>
+       </div>
+       <p class="exchange-rate" id="exchange-rate">1USD = 11.450UZS</p>
+    </div>
+</body>
+</html>
