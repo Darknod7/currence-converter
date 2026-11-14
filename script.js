@@ -17,3 +17,4 @@ const exchangeRate = document.getElementById('exchange-rate');
  currenceFirstEl.addEventListener("change",updateRate); 
   currenceSecondEl.addEventListener("change",updateRate); 
   worthFirstEl.addEventListener("input",updateRate);
+updateRate();
