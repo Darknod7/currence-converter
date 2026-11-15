@@ -1,36 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>currence-converter</title>
+    <meta name="theme-color" content="#f4f7ff">
+    <title>Valyuta konvertori</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Currence-Converter</h1>
-       <div class="currence-container">
-        <select id="currence-first">
-            <option value="USD"selected>USD</option>
-             <option value="RUB">RUB</option>
-              <option value="UZS">UZS</option>
-               <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>  
-        </select>
-        <input type="number" id="worth-first" value="1" min="0">
-       </div>
-       <div class="currence-container">
-        <select id="currence-second">
-            <option value="USD">USD</option>
-             <option value="RUB">RUB</option>
-              <option value="UZS"selected>UZS</option>
-               <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>  
-        </select>
-        <input type="number" id="worth-second" disabled>
-       </div>
-       <p class="exchange-rate" id="exchange-rate">1USD = 11.450UZS</p>
-    </div>
+    <main class="page">
+        <section class="container" aria-labelledby="page-title">
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Qora rejimni yoqish" aria-pressed="false">
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Qora rejim</span>
+            </button>
+            <div class="brand-mark" aria-hidden="true">fx</div>
+            <p class="eyebrow">TEZ VA OSON</p>
+            <h1 id="page-title">Valyuta konvertori</h1>
+            <p class="intro">Valyutalarni real vaqt kursida hisoblang</p>
+
+            <div class="converter">
+                <div class="currency-card">
+                    <label class="field-label" for="worth-first">Siz yuborasiz</label>
+                    <div class="currency-controls">
+                        <div class="currency-select">
+                            <span class="currency-badge" aria-hidden="true">US</span>
+                            <select id="currence-first" aria-label="Yuboriladigan valyuta">
+                                <option value="USD" selected>USD</option>
+                                <option value="RUB">RUB</option>
+                                <option value="UZS">UZS</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CNY">CNY</option>
+                                <option value="INR">INR</option>
+                                <option value="CAD">CAD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="TRY">TRY</option>
+                                <option value="KZT">KZT</option>
+                                <option value="AED">AED</option>
+                                <option value="KRW">KRW</option>
+                                <option value="SGD">SGD</option>
+                            </select>
+                            <span class="currency-chevron" aria-hidden="true"></span>
+                        </div>
+                        <input type="number" id="worth-first" value="1" min="0" step="any" aria-label="Yuboriladigan summa">
+                    </div>
+                </div>
+
+                <div class="connector" aria-hidden="true"><span></span></div>
+
+                <div class="currency-card currency-card--result">
+                    <label class="field-label" for="worth-second">Qabul qilasiz</label>
+                    <div class="currency-controls">
+                        <div class="currency-select">
+                            <span class="currency-badge" aria-hidden="true">UZ</span>
+                            <select id="currence-second" aria-label="Qabul qilinadigan valyuta">
+                                <option value="USD">USD</option>
+                                <option value="RUB">RUB</option>
+                                <option value="UZS" selected>UZS</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="CNY">CNY</option>
+                                <option value="INR">INR</option>
+                                <option value="CAD">CAD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="CHF">CHF</option>
+                                <option value="TRY">TRY</option>
+                                <option value="KZT">KZT</option>
+                                <option value="AED">AED</option>
+                                <option value="KRW">KRW</option>
+                                <option value="SGD">SGD</option>
+                            </select>
+                            <span class="currency-chevron" aria-hidden="true"></span>
+                        </div>
+                        <input type="text" id="worth-second" aria-label="Hisoblangan summa" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rate-panel">
+                <span class="rate-icon" aria-hidden="true">↗</span>
+                <p class="exchange-rate" id="exchange-rate" aria-live="polite">Kurs yuklanmoqda...</p>
+            </div>
+            <p class="disclaimer">Kurslar ma'lumot uchun ko'rsatilgan</p>
+        </section>
+    </main>
 </body>
 </html>
